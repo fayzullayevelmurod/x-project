@@ -61,3 +61,20 @@
     }
   }
 }
+
+@media screen and (max-width: 992px) {
+  .contact-page__boxes {
+    grid-template-columns: 1fr;
+  }
+  .contact-page .map {
+    height: 300px;
+  }
+  .contact-page {
+    padding-bottom: 100px;
+  }
+  .contact-page .box-content .link-box .link-text,
+  .contact-page__box .text {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
