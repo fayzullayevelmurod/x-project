@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebDev</title>
+  <!-- Select2 CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+  <!-- Dropify CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/dropify/0.2.2/css/dropify.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header__container">
+        <div class="header__items">
+          <a class="header_item header_item_logo" href="/">
+            <img src="/temple/images/component/header/logo.svg" alt="logo">
+          </a>
+
+          <div class="header_item">
+            <ul class="header__navigations">
+              <li class="navigation">
+                <a>
+                  Контакты
+                </a>
+              </li>
+
+              <li class="navigation">
+                <a>
+                  Отзывы
+                </a>
+              </li>
+
+              <li class="navigation">
+                <a>
+                  Направления
+                </a>
+                <svg width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.23715 5.19583C4.84082 5.6282 4.15918 5.6282 3.76285 5.19583L0.536082 1.67573C-0.0518696 1.03432 0.40313 7.72592e-08 1.27323 1.25169e-07L7.72676 4.80514e-07C8.59687 5.28424e-07 9.05187 1.03432 8.46392 1.67572L5.23715 5.19583Z"
+                    fill="white" />
+                </svg>
+
+                <div class="lists_wrapper">
+                  <ul class="lists">
+
+                    <li class="list">
+                      <a itemprop="url" href="#">
+                        Разработка сайта
+                      </a>
+                    </li>
+
+                    <li class="list">
+                      <a itemprop="url" href="#">
+                        Верстка
+                      </a>
+                    </li>
+
+                    <li class="list">
+                      <a itemprop="url" href="#">
+                        Контекстная реклама
+                      </a>
+                    </li>
+
+                    <li class="list">
+                      <a itemprop="url" href="#">
+                        SEO-продвижение
+                      </a>
+                    </li>
+
+                  </ul>
+                </div>
+              </li>
+
+              <li class="navigation">
+                <a itemprop="url" href="#">
+                  Портфолио
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="header_item header__buttons_wrapper">
+            <div class="header__buttons">
+              <a href="tel:+7 (945) 345-34-43" class="header__phone">+7 (945) 345-34-43</a>
+
+              <a class="button" href="#" onclick="modal(this);" data-modal="#modal_test">Заказать</a>
+
+              <div class="header__settings_icon_wrapper">
+                <svg class="header__settings_icon header__settings_icon_word" width="27" height="28" fill="none"
+                  viewBox="0 0 27 28" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M13.5 26.5C20.4036 26.5 26 20.9036 26 14C26 7.09644 20.4036 1.5 13.5 1.5C6.59644 1.5 1 7.09644 1 14C1 20.9036 6.59644 26.5 13.5 26.5Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M1 14H26" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M13.5 1.5C16.6266 4.92294 18.4034 9.36504 18.5 14C18.4034 18.635 16.6266 23.0771 13.5 26.5C10.3734 23.0771 8.59656 18.635 8.5 14C8.59656 9.36504 10.3734 4.92294 13.5 1.5Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <div class="header__settings">
+                  <div class="items">
+
+                    <div class="item">
+
+                      <a class="button activ" href="#">
+
+                        <img src="/temple/images/langluage/russia.png" alt="">
+                        Русский
+                      </a>
+
+                      <a class="button" href="#">
+
+                        <img src="/temple/images/langluage/russia.png" alt="">
+                        Русский
+                      </a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <svg class="header__settings_icon" width="27" height="27" viewBox="0 0 27 27"
+                xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.99" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M7.91016 0C8.0508 0 8.19139 0 8.33203 0C8.66046 0.183528 8.77474 0.464778 8.6748 0.84375C6.76118 5.01079 6.90177 9.10649 9.09668 13.1309C11.6882 17.2929 15.4499 19.455 20.3818 19.6172C21.6659 19.6185 22.9227 19.4339 24.1523 19.0635C24.9259 18.794 25.6906 18.5039 26.4463 18.1934C26.6957 18.2236 26.8802 18.3467 27 18.5625C27 18.7207 27 18.8789 27 19.0371C24.8965 23.0989 21.6094 25.6565 17.1387 26.71C16.502 26.8321 15.8691 26.9288 15.2402 27C14.5547 27 13.8691 27 13.1836 27C8.32191 26.5032 4.58654 24.2005 1.97754 20.0918C0.877468 18.1892 0.21829 16.1502 0 13.9746C0 13.1836 0 12.3926 0 11.6016C0.620784 6.34331 3.2575 2.47612 7.91016 0Z" />
+              </svg>
+            </div>
+
+          </div>
+
+          <div class="header_mobile__icon burger_menu_open">
+            <div class="rect"></div>
+            <div class="rect"></div>
+            <div class="rect"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- main start -->
+    <main>
+      <!-- intro start -->
+      <section class="intro">
+      </section>
+      <!-- intro end -->
+
+      <!-- list-works -->
+      <section class="list-works">
+        <div class="list-works__container">
+          <ul class="breadcrumb">
+            <li class="breadcrumb__item">
+              <a class="breadcrumb__link" href="#!">Главная /</a>
+            </li>
+            <li>
+              <a class="breadcrumb__link active" href="#!">Список работ</a>
+            </li>
+          </ul>
+          <h2 class="list-works__select-category">Выберите категорию</h2>
+          <div class="filter-box">
+            <div class="list-works__select-btns">
+              <button class="select-btn active">
+                <span>Дизайн</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.986674 0.982786C0.788092 1.18059 0.602727 1.36813 0.447495 1.52644C0.1964 1.7825 0.197555 2.19056 0.448398 2.44687C0.795793 2.80185 1.31387 3.32902 1.89001 3.90787C2.92954 4.95225 3.81845 5.84882 3.86545 5.90016L3.95088 5.99359L1.98415 7.96101C1.37116 8.5742 0.818515 9.13256 0.454673 9.50132C0.204621 9.75476 0.199483 10.1593 0.446515 10.4157C0.606808 10.5821 0.800728 10.7808 1.01026 10.9902L1.54924 11.5289C1.8096 11.7891 2.23159 11.789 2.49189 11.5288L3.9885 10.0323C5.07081 8.95003 5.97056 8.05983 5.98788 8.05405C6.00523 8.04827 6.90125 8.92282 7.97903 9.99747C8.59183 10.6085 9.15094 11.1587 9.51931 11.5197C9.77136 11.7667 10.1716 11.7727 10.4271 11.5293C10.646 11.3208 10.9104 11.0635 11.1433 10.822L11.531 10.4323C11.7902 10.1718 11.7897 9.75057 11.5298 9.49069L8.03132 5.99223L8.30954 5.7108C8.46259 5.556 9.33249 4.68134 10.2427 3.76711C10.8352 3.17191 11.3785 2.62119 11.6854 2.30932C11.848 2.14417 11.8753 1.92174 11.7238 1.74639C11.5908 1.5924 11.3787 1.36277 11.0408 1.02358C10.8117 0.793493 10.5883 0.574848 10.4093 0.401464C10.1838 0.182988 9.84667 0.168863 9.61522 0.381084C9.31682 0.654698 8.81492 1.13227 7.98972 1.95606C6.90832 3.03562 6.01596 3.92599 6.00669 3.93463C5.99739 3.9433 5.10035 3.06157 4.01324 1.97519C3.39453 1.35691 2.82958 0.802613 2.4576 0.439734C2.2041 0.192429 1.80216 0.189127 1.54695 0.434671C1.38393 0.591515 1.19 0.780252 0.986674 0.982786Z"
+                    fill="white" />
+                </svg>
+              </button>
+              <button class="select-btn">
+                <span>Настройка сайта</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.986674 0.982786C0.788092 1.18059 0.602727 1.36813 0.447495 1.52644C0.1964 1.7825 0.197555 2.19056 0.448398 2.44687C0.795793 2.80185 1.31387 3.32902 1.89001 3.90787C2.92954 4.95225 3.81845 5.84882 3.86545 5.90016L3.95088 5.99359L1.98415 7.96101C1.37116 8.5742 0.818515 9.13256 0.454673 9.50132C0.204621 9.75476 0.199483 10.1593 0.446515 10.4157C0.606808 10.5821 0.800728 10.7808 1.01026 10.9902L1.54924 11.5289C1.8096 11.7891 2.23159 11.789 2.49189 11.5288L3.9885 10.0323C5.07081 8.95003 5.97056 8.05983 5.98788 8.05405C6.00523 8.04827 6.90125 8.92282 7.97903 9.99747C8.59183 10.6085 9.15094 11.1587 9.51931 11.5197C9.77136 11.7667 10.1716 11.7727 10.4271 11.5293C10.646 11.3208 10.9104 11.0635 11.1433 10.822L11.531 10.4323C11.7902 10.1718 11.7897 9.75057 11.5298 9.49069L8.03132 5.99223L8.30954 5.7108C8.46259 5.556 9.33249 4.68134 10.2427 3.76711C10.8352 3.17191 11.3785 2.62119 11.6854 2.30932C11.848 2.14417 11.8753 1.92174 11.7238 1.74639C11.5908 1.5924 11.3787 1.36277 11.0408 1.02358C10.8117 0.793493 10.5883 0.574848 10.4093 0.401464C10.1838 0.182988 9.84667 0.168863 9.61522 0.381084C9.31682 0.654698 8.81492 1.13227 7.98972 1.95606C6.90832 3.03562 6.01596 3.92599 6.00669 3.93463C5.99739 3.9433 5.10035 3.06157 4.01324 1.97519C3.39453 1.35691 2.82958 0.802613 2.4576 0.439734C2.2041 0.192429 1.80216 0.189127 1.54695 0.434671C1.38393 0.591515 1.19 0.780252 0.986674 0.982786Z"
+                    fill="white" />
+                </svg>
+              </button>
+              <button class="select-btn">
+                <span>Верстка</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.986674 0.982786C0.788092 1.18059 0.602727 1.36813 0.447495 1.52644C0.1964 1.7825 0.197555 2.19056 0.448398 2.44687C0.795793 2.80185 1.31387 3.32902 1.89001 3.90787C2.92954 4.95225 3.81845 5.84882 3.86545 5.90016L3.95088 5.99359L1.98415 7.96101C1.37116 8.5742 0.818515 9.13256 0.454673 9.50132C0.204621 9.75476 0.199483 10.1593 0.446515 10.4157C0.606808 10.5821 0.800728 10.7808 1.01026 10.9902L1.54924 11.5289C1.8096 11.7891 2.23159 11.789 2.49189 11.5288L3.9885 10.0323C5.07081 8.95003 5.97056 8.05983 5.98788 8.05405C6.00523 8.04827 6.90125 8.92282 7.97903 9.99747C8.59183 10.6085 9.15094 11.1587 9.51931 11.5197C9.77136 11.7667 10.1716 11.7727 10.4271 11.5293C10.646 11.3208 10.9104 11.0635 11.1433 10.822L11.531 10.4323C11.7902 10.1718 11.7897 9.75057 11.5298 9.49069L8.03132 5.99223L8.30954 5.7108C8.46259 5.556 9.33249 4.68134 10.2427 3.76711C10.8352 3.17191 11.3785 2.62119 11.6854 2.30932C11.848 2.14417 11.8753 1.92174 11.7238 1.74639C11.5908 1.5924 11.3787 1.36277 11.0408 1.02358C10.8117 0.793493 10.5883 0.574848 10.4093 0.401464C10.1838 0.182988 9.84667 0.168863 9.61522 0.381084C9.31682 0.654698 8.81492 1.13227 7.98972 1.95606C6.90832 3.03562 6.01596 3.92599 6.00669 3.93463C5.99739 3.9433 5.10035 3.06157 4.01324 1.97519C3.39453 1.35691 2.82958 0.802613 2.4576 0.439734C2.2041 0.192429 1.80216 0.189127 1.54695 0.434671C1.38393 0.591515 1.19 0.780252 0.986674 0.982786Z"
+                    fill="white" />
+                </svg>
+              </button>
+              <button class="select-btn">
+                <span>SEO</span>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.986674 0.982786C0.788092 1.18059 0.602727 1.36813 0.447495 1.52644C0.1964 1.7825 0.197555 2.19056 0.448398 2.44687C0.795793 2.80185 1.31387 3.32902 1.89001 3.90787C2.92954 4.95225 3.81845 5.84882 3.86545 5.90016L3.95088 5.99359L1.98415 7.96101C1.37116 8.5742 0.818515 9.13256 0.454673 9.50132C0.204621 9.75476 0.199483 10.1593 0.446515 10.4157C0.606808 10.5821 0.800728 10.7808 1.01026 10.9902L1.54924 11.5289C1.8096 11.7891 2.23159 11.789 2.49189 11.5288L3.9885 10.0323C5.07081 8.95003 5.97056 8.05983 5.98788 8.05405C6.00523 8.04827 6.90125 8.92282 7.97903 9.99747C8.59183 10.6085 9.15094 11.1587 9.51931 11.5197C9.77136 11.7667 10.1716 11.7727 10.4271 11.5293C10.646 11.3208 10.9104 11.0635 11.1433 10.822L11.531 10.4323C11.7902 10.1718 11.7897 9.75057 11.5298 9.49069L8.03132 5.99223L8.30954 5.7108C8.46259 5.556 9.33249 4.68134 10.2427 3.76711C10.8352 3.17191 11.3785 2.62119 11.6854 2.30932C11.848 2.14417 11.8753 1.92174 11.7238 1.74639C11.5908 1.5924 11.3787 1.36277 11.0408 1.02358C10.8117 0.793493 10.5883 0.574848 10.4093 0.401464C10.1838 0.182988 9.84667 0.168863 9.61522 0.381084C9.31682 0.654698 8.81492 1.13227 7.98972 1.95606C6.90832 3.03562 6.01596 3.92599 6.00669 3.93463C5.99739 3.9433 5.10035 3.06157 4.01324 1.97519C3.39453 1.35691 2.82958 0.802613 2.4576 0.439734C2.2041 0.192429 1.80216 0.189127 1.54695 0.434671C1.38393 0.591515 1.19 0.780252 0.986674 0.982786Z"
+                    fill="white" />
+                </svg>
+              </button>
+            </div>
+            <div class="list-works__select">
+              <div class="selected-box">
+                <span class="selected-text">Сначала новые</span>
+                <svg width="15" height="8" viewBox="0 0 15 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13.5714 1L8.39685 6.17462C7.7857 6.78576 6.78571 6.78576 6.17461 6.17462L1 1" stroke="white"
+                    stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <ul class="list-works__select-options">
+                <li class="list-works__select-option active">Сначала новые</li>
+                <li class="list-works__select-option">Сначала старые</li>
+                <li class="list-works__select-option">Еще 3 пункт</li>
+                <li class="list-works__select-option">И плюсом к нему 4</li>
+              </ul>
+            </div>
+          </div>
+          <div class="cards-container">
+            <div class="card">
+              <h3 class="card-title">Название сайта</h3>
+              <p class="card-category">Категория</p>
+            </div>
+            <div class="card card-large">
+              <h3 class="card-title">Название сайта 2</h3>
+              <p class="card-category">Категория</p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Название сайта</h3>
+              <p class="card-category">Категория</p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Название сайта</h3>
+              <p class="card-category">Категория</p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Название сайта</h3>
+              <p class="card-category">Категория</p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Название сайта</h3>
+              <p class="card-category">Категория</p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Название сайта</h3>
+              <p class="card-category">Категория</p>
+            </div>
+            <div class="card card-large">
+              <h3 class="card-title">Название сайта</h3>
+              <p class="card-category">Категория</p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Название сайта</h3>
+              <p class="card-category">Категория</p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Название сайта</h3>
+              <p class="card-category">Категория</p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Название сайта 2</h3>
+              <p class="card-category">Категория</p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Название сайта</h3>
+              <p class="card-category">Категория</p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Название сайта</h3>
+              <p class="card-category">Категория</p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Название сайта</h3>
+              <p class="card-category">Категория</p>
+            </div>
+            <div class="card card-large">
+              <h3 class="card-title">Название сайта</h3>
+              <p class="card-category">Категория</p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Название сайта</h3>
+              <p class="card-category">Категория</p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Название сайта</h3>
+              <p class="card-category">Категория</p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Название сайта</h3>
+              <p class="card-category">Категория</p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Название сайта</h3>
+              <p class="card-category">Категория</p>
+            </div>
+          </div>
+          <button class="show-more__btn">Показать еще</button>
+        </div>
+      </section>
+      <!-- list-works -->
+
+      <!-- start -->
+      <section class="faq">
+        <div class="faq__container">
+          <h2 class="title">FAQ</h2>
+          <div class="accordions">
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3 class="accordion-title">Lorem Ipsum is a fish</h3>
+                <img src="./public/temple/images/dark/icons/arrow-down.svg" alt="">
+              </div>
+              <div class="accordion-content">
+                <p class="accordion-info">
+                  Lorem Ipsum is a fish text often used in print and web design. Lorem Ipsum has been the standard
+                  "fish" for Latin texts since the early 16th century. At that time, some unnamed printer created a
+                  large collection of font sizes and shapes, using Lorem Ipsum to print samples. Lorem Ipsum has not
+                  only
+                </p>
+              </div>
+            </div>
+            <div class="accordion">
+              <div class="accordion-header">
+                <h3 class="accordion-title">Lorem Ipsum is a fish</h3>
+                <img src="./public/temple/images/dark/icons/arrow-down.svg" alt="">
+              </div>
+              <div class="accordion-content">
+                <p class="accordion-info">
+                  Lorem Ipsum is a fish text often used in print and web design. Lorem Ipsum has been the standard
+                  "fish" for Latin texts since the early 16th century. At that time, some unnamed printer created a
+                  large collection of font sizes and shapes, using Lorem Ipsum to print samples. Lorem Ipsum has not
+                  only
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- faq end -->
+
+    </main>
+    <!-- main end -->
+
+    <div class="burger_menu__bg burger_menu_close"></div>
+
+    <div class="burger_menu">
+      <div class="burger_menu__content">
+        <div class="burger_menu__content_info">
+          <img src="/sample/v1/temple/images/logos/logo.svg" alt="" class="logo" onclick="location.href = '/';">
+
+          <svg class="close burger_menu_close" width="15" height="15" viewBox="0 0 15 15" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M1.23334 1.22848C0.935229 1.52543 0.660942 1.80387 0.447115 2.02273C0.196487 2.27925 0.197379 2.68721 0.448081 2.94366C0.878267 3.38371 1.57724 4.09588 2.36252 4.88484C3.66192 6.19031 4.77307 7.31102 4.83181 7.37521L4.9386 7.49199L2.48019 9.95126C1.64812 10.7836 0.904998 11.5351 0.456446 11.9901C0.206495 12.2436 0.201478 12.6477 0.447797 12.9048C0.666371 13.1329 0.950745 13.4259 1.26283 13.7378L2.05439 14.5289C2.31476 14.7891 2.73675 14.789 2.99705 14.5288L4.98563 12.5403C6.33851 11.1875 7.4632 10.0748 7.48484 10.0676C7.50653 10.0603 8.62656 11.1535 9.97378 12.4968C10.805 13.3257 11.5572 14.0649 12.0115 14.5096C12.2636 14.7565 12.6636 14.7623 12.9199 14.5198C13.2119 14.2436 13.5962 13.8727 13.9291 13.5275L14.531 12.9225C14.7902 12.662 14.7897 12.2408 14.5298 11.9809L10.0392 7.49029L10.3869 7.1385C10.5782 6.945 11.6656 5.85168 12.8033 4.70889C13.588 3.92065 14.3036 3.19484 14.6721 2.82033C14.8346 2.65516 14.8639 2.43104 14.7149 2.25356C14.555 2.06304 14.2785 1.75876 13.8011 1.27947C13.4716 0.948739 13.1518 0.636915 12.9149 0.40829C12.6889 0.190242 12.3507 0.175477 12.1179 0.386248C11.7608 0.709631 11.1159 1.31822 9.98715 2.44508C8.6354 3.79452 7.51995 4.90749 7.50836 4.91828C7.49673 4.92913 6.37544 3.82696 5.01655 2.46898C4.17751 1.63053 3.41756 0.886203 2.95891 0.439417C2.70522 0.192296 2.30362 0.188955 2.04778 0.433843C1.82357 0.648455 1.53684 0.926174 1.23334 1.22848Z" />
+          </svg>
+
+          <div class="burger_menu__buttons">
+            <a href="tel:+7 (945) 345-34-43" class="burger_menu__phone">+7 (945) 345-34-43</a>
+            <a class="button" href="$">
+              Заказать
+            </a>
+          </div>
+
+        </div>
+
+        <ul class="burger_menu__navigations">
+          <li>
+            <a class="navigation" itemprop="url" href="#">
+              Контакты
+            </a>
+          </li>
+
+          <li>
+            <a class="navigation" itemprop="url" href="#">
+              Отзывы
+            </a>
+          </li>
+
+          <li>
+            <a class="navigation">
+              Направления
+
+              <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M11.8047 0.18794C12.0651 0.438526 12.0651 0.844807 11.8047 1.09539L6.4714 6.81206C6.21105 7.06265 5.78894 7.06265 5.5286 6.81206L0.195262 1.09539C-0.0650874 0.844807 -0.0650873 0.438526 0.195262 0.187939C0.455612 -0.0626471 0.877722 -0.0626471 1.13807 0.187939L6 5.45088L10.8619 0.18794C11.1223 -0.0626467 11.5444 -0.0626466 11.8047 0.18794Z"
+                  fill="white" />
+              </svg>
+
+            </a>
+
+            <div class="navigation_list">
+              <a class="navigation" itemprop="url" href="#">Разработка сайта</a>
+              <a class="navigation" itemprop="url" href="#">Верстка</a>
+              <a class="navigation" itemprop="url" href="#">Контекстная реклама</a>
+              <a class="navigation" itemprop="url" href="#">SEO-продвижение</a>
+            </div>
+          </li>
+
+          <li>
+            <a class="navigation" itemprop="url" href="#">
+              Портфолио
+            </a>
+          </li>
+        </ul>
+
+        <div class="burger_menu__settings">
+          <div class="setting_wrapper">
+            <p class="title">Язык</p>
+
+            <div class="setting_items_wrapper">
+
+              <div class="setting_item_select">
+                <img src="/sample/v1/temple/images/header/languages/russian-federation.svg" alt="">
+                Русский
+                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="6" viewBox="0 0 9 6" fill="none">
+                  <path
+                    d="M5.23715 5.19583C4.84082 5.6282 4.15918 5.6282 3.76285 5.19583L0.536082 1.67573C-0.0518696 1.03432 0.40313 7.72592e-08 1.27323 1.25169e-07L7.72676 4.80514e-07C8.59687 5.28424e-07 9.05187 1.03432 8.46392 1.67572L5.23715 5.19583Z"
+                    fill="white" />
+                </svg>
+              </div>
+
+
+              <div class="setting_items">
+
+                <a class="setting_item activ" href="#">
+                  <img src="/sample/v1/temple/images/header/languages/russian-federation.svg" alt="">
+                  Русский
+                </a>
+                <a class="setting_item" href="#">
+                  <img src="/sample/v1/temple/images/header/languages/russian-federation.svg" alt="">
+                  Русский
+                </a>
+                <a class="setting_item" href="#">
+                  <img src="/sample/v1/temple/images/header/languages/russian-federation.svg" alt="">
+                  Русский
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="setting_wrapper">
+            <p class="title">Валюта</p>
+
+            <div class="setting_items_wrapper">
+
+              <div class="setting_item_select">
+                <img src="/sample/v1/temple/images/header/currencies/usd_10x12.svg" alt="">
+                USD
+                <svg xmlns="http://www.w3.org/2000/svg" width="9" height="6" viewBox="0 0 9 6" fill="none">
+                  <path
+                    d="M5.23715 5.19583C4.84082 5.6282 4.15918 5.6282 3.76285 5.19583L0.536082 1.67573C-0.0518696 1.03432 0.40313 7.72592e-08 1.27323 1.25169e-07L7.72676 4.80514e-07C8.59687 5.28424e-07 9.05187 1.03432 8.46392 1.67572L5.23715 5.19583Z"
+                    fill="white" />
+                </svg>
+              </div>
+
+
+              <div class="setting_items">
+
+                <a class="setting_item  activ " onclick="">
+                  <img src="/sample/v1/temple/images/header/currencies/aed_10x12.svg" alt="">
+                  USD
+                </a>
+
+                <a class="setting_item " onclick="">
+                  <img src="/sample/v1/temple/images/header/currencies/eur_10x12.svg" alt="">
+                  USD
+                </a>
+
+                <a class="setting_item " onclick="">
+                  <img src="/sample/v1/temple/images/header/currencies/rub_10x12.svg" alt="">
+                  USD
+                </a>
+
+                <a class="setting_item " onclick="">
+                  <img src="/sample/v1/temple/images/header/currencies/usd_10x12.svg" alt="">
+                  USD
+                </a>
+
+
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="burger_menu__contact">
+          <p class="title">Контакты</p>
+          <a class="phone" href="tel:+971568463945">+971568463945</a>
+          <a class="mail" href="mailto:manager@impyrex.com">manager@impyrex.com</a>
+
+          <p class="footer_item_last_tittle">Адрес</p>
+
+          <div class="footer_item_last_map">
+            <iframe src="https://www.google.com/maps?q=&hl=&z=9&output=embed" width="100%" height="100%"
+              style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__header">
+          <a href="" class="footer__header_title">
+            <img src="/temple/images/component/header/logo.svg" alt="logo" />
+            Web Direction
+          </a>
+        </div>
+        <div class="footer__body">
+          <div class="footer__body__contacts footer__contacts">
+            <form action="#" class="footer__contacts__form">
+              <h5 class="footer__form__title">
+                У вас остались вопросы? Свяжитесь с нами!
+              </h5>
+              <div class="footer__form__user-activity">
+                <div class="footer__form__wrapper-input">
+                  <img src="/temple/images/component/footer/phone.svg" alt="Телефон" />
+                  <input type="text" class="footer__form__input" placeholder="Введите номер..." />
+                </div>
+                <button class="footer__form__btn pages-btn">
+                  Оставить заявку
+                </button>
+              </div>
+            </form>
+            <div class="footer__contacts__phone-call footer__phone">
+              <a href="tel:+79453453443" class="footer__phone__call">+7 (945) 345-34-43</a>
+              <ul class="footer__phone__list">
+                <li class="footer__phone__item">
+                  <a href="#" class="footer__phone__link">
+                    <img src="/temple/images/component/footer/social/wt.svg" alt="whatsapp" />
+                  </a>
+                </li>
+                <li class="footer__phone__item">
+                  <a href="#" class="footer__phone__link">
+                    <img src="/temple/images/component/footer/social/tg.svg" alt="tg" />
+                  </a>
+                </li>
+                <li class="footer__phone__item">
+                  <a href="#" class="footer__phone__link">
+                    <img src="/temple/images/component/footer/social/vk.svg" alt="vk" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <p class="footer__contacts__dedlain">
+              График работы: <span>пн-вс, с 8:00 по 22:00 МСК</span>
+            </p>
+          </div>
+          <ul class="footer__body__menu footer__menu">
+            <li class="footer__menu__item">
+              О нас
+            </li>
+            <li class="footer__menu__item">
+              <a href="#" class="footer__menu__link">Список работ</a>
+            </li>
+            <li class="footer__menu__item">
+              <a href="#" class="footer__menu__link">Отзывы</a>
+            </li>
+            <li class="footer__menu__item">
+              <a href="#" class="footer__menu__link">Контакты</a>
+            </li>
+            <li class="footer__menu__item">
+              <a href="#" class="footer__menu__link">Политика соглашения</a>
+            </li>
+            <li class="footer__menu__item">
+              <a href="#" class="footer__menu__link">FAQ</a>
+            </li>
+          </ul>
+        </div>
+        <p class="footer__text">© 2022. All rights reserved</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- modal -->
+  <div id="modal_test" class="modal cooperation_thanks">
+    <div class="modal__content">
+      <div class="modal__header">
+        <h2>Оставьте свои контактные данные,
+          и мы свяжемся с Вами!</h2>
+        <button class="close-btn modal_close">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M1.23334 1.22848C0.935229 1.52543 0.660942 1.80387 0.447115 2.02273C0.196487 2.27925 0.197379 2.68721 0.448081 2.94366C0.878267 3.38371 1.57724 4.09588 2.36252 4.88484C3.66192 6.19031 4.77307 7.31102 4.83181 7.37521L4.9386 7.49199L2.48019 9.95126C1.64812 10.7836 0.904998 11.5351 0.456446 11.9901C0.206495 12.2436 0.201478 12.6477 0.447797 12.9048C0.666371 13.1329 0.950745 13.4259 1.26283 13.7378L2.05439 14.5289C2.31476 14.7891 2.73675 14.789 2.99705 14.5288L4.98563 12.5403C6.33851 11.1875 7.4632 10.0748 7.48484 10.0676C7.50653 10.0603 8.62656 11.1535 9.97378 12.4968C10.805 13.3257 11.5572 14.0649 12.0115 14.5096C12.2636 14.7565 12.6636 14.7623 12.9199 14.5198C13.2119 14.2436 13.5962 13.8727 13.9291 13.5275L14.531 12.9225C14.7902 12.662 14.7897 12.2408 14.5298 11.9809L10.0392 7.49029L10.3869 7.1385C10.5782 6.945 11.6656 5.85168 12.8033 4.70889C13.588 3.92065 14.3036 3.19484 14.6721 2.82033C14.8346 2.65516 14.8639 2.43104 14.7149 2.25356C14.555 2.06304 14.2785 1.75876 13.8011 1.27947C13.4716 0.948739 13.1518 0.636915 12.9149 0.40829C12.6889 0.190242 12.3507 0.175477 12.1179 0.386248C11.7608 0.709631 11.1159 1.31822 9.98715 2.44508C8.6354 3.79452 7.51995 4.90749 7.50836 4.91828C7.49673 4.92913 6.37544 3.82696 5.01655 2.46898C4.17751 1.63053 3.41756 0.886203 2.95891 0.439417C2.70522 0.192296 2.30362 0.188955 2.04778 0.433843C1.82357 0.648455 1.53684 0.926174 1.23334 1.22848Z"
+              fill="white" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal__body">
+        <p>
+          Мы позвоним Вам и уточним все
+          необходимые детали
+        </p>
+        <form>
+          <div class="box">
+            <label>Номер телефона</label>
+            <div class="phone-input">
+              <div class="select-number__box">
+                <div class="selectext-box">
+                  <span class="selected-code">+7</span>
+                  <svg width="7" height="5" viewBox="0 0 7 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2.95231 4.73124C3.23417 5.08959 3.76583 5.08959 4.04769 4.73124L6.84213 1.17859C7.21437 0.705347 6.88659 0 6.29444 0H0.70556C0.113407 0 -0.214369 0.705347 0.157869 1.17859L2.95231 4.73124Z"
+                      fill="white" />
+                  </svg>
+                </div>
+                <div class="country-select">
+                  <span class="country-code active">+7</span>
+                  <span class="country-code">+8</span>
+                  <span class="country-code">+9</span>
+                </div>
+              </div>
+              <div class="line"></div>
+              <input type="tel" id="phone-number" class="phone-number-input" placeholder="000000000" />
+            </div>
+          </div>
+          <div class="box">
+            <label>Выберите категорию</label>
+            <div class="select selected-box-btn">
+              <div class="selected-box">
+                <span>Дизайн</span>
+                <svg width="7" height="5" viewBox="0 0 7 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2.95231 4.73124C3.23417 5.08959 3.76583 5.08959 4.04769 4.73124L6.84213 1.17859C7.21437 0.705347 6.88659 0 6.29444 0H0.70556C0.113407 0 -0.214369 0.705347 0.157869 1.17859L2.95231 4.73124Z"
+                    fill="white" />
+                </svg>
+              </div>
+              <div class="select-options">
+                <div class="search-box">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M3.47266 3.00781C3.98803 3.10896 4.13842 3.40063 3.92383 3.88281C3.3264 4.49922 3.0712 5.2375 3.15821 6.09766C3.00847 6.51484 2.73048 6.62875 2.32422 6.43945C2.24401 6.37755 2.18477 6.30005 2.14649 6.20703C1.97413 4.99652 2.32504 3.962 3.19922 3.10352C3.29082 3.06288 3.38199 3.03097 3.47266 3.00781Z"
+                      fill="#353535" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5.35938 0C5.73308 0 6.10676 0 6.48047 0C8.50128 0.264954 10.0371 1.26756 11.0879 3.00781C11.9753 4.69336 12.0756 6.42513 11.3887 8.20312C11.1523 8.7491 10.847 9.25042 10.4727 9.70703C11.6116 10.8597 12.7555 12.0081 13.9043 13.1523C13.9442 13.2052 13.9761 13.2599 14 13.3164C14 13.4258 14 13.5352 14 13.6445C13.9271 13.8086 13.8086 13.9271 13.6445 14C13.5352 14 13.4258 14 13.3164 14C13.2599 13.9761 13.2052 13.9442 13.1523 13.9043C12.0081 12.7555 10.8597 11.6116 9.70703 10.4727C7.96083 11.8326 6.02853 12.1744 3.91016 11.498C2.17138 10.8257 0.972809 9.618 0.314453 7.875C0.161894 7.41707 0.0570757 6.95223 0 6.48047C0 6.10676 0 5.73308 0 5.35938C0.216061 3.55491 1.0546 2.11935 2.51562 1.05273C3.37619 0.46282 4.32411 0.111908 5.35938 0ZM5.82422 1.03906C7.74905 1.0963 9.20284 1.94396 10.1855 3.58203C10.977 5.15452 10.9679 6.72224 10.1582 8.28516C9.1948 9.877 7.77746 10.7064 5.90625 10.7734C3.82175 10.6792 2.33152 9.69484 1.43555 7.82031C0.731273 5.93923 1.01382 4.22568 2.2832 2.67969C3.24174 1.65585 4.42209 1.10897 5.82422 1.03906Z"
+                      fill="#353535" />
+                  </svg>
+                  <input type="text" placeholder="Поиск...">
+                </div>
+                <div class="select-option">Разработка сайта</div>
+                <div class="select-option">Верстка</div>
+                <div class="select-option">Контекстная реклама</div>
+                <div class="select-option">SEO-продвижение</div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="check-box">
+          <input class="check-input" type="checkbox" id="check">
+          <label for="check">
+            Нажимая на кнопку, вы даете свое согласие на
+            обработку персональных данных.
+          </label>
+        </div>
+        <button class="send-btn disabled" onclick="modal('#thanks_modal');" data-modal="#thanks_modal"
+          disabled>Отправить</button>
+      </div>
+    </div>
+  </div>
+  <div id="thanks_modal" class="modal cooperation_thanks">
+    <div class="modal__content">
+      <div class="modal__header">
+        <button class="close-btn modal_close">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M1.23334 1.22848C0.935229 1.52543 0.660942 1.80387 0.447115 2.02273C0.196487 2.27925 0.197379 2.68721 0.448081 2.94366C0.878267 3.38371 1.57724 4.09588 2.36252 4.88484C3.66192 6.19031 4.77307 7.31102 4.83181 7.37521L4.9386 7.49199L2.48019 9.95126C1.64812 10.7836 0.904998 11.5351 0.456446 11.9901C0.206495 12.2436 0.201478 12.6477 0.447797 12.9048C0.666371 13.1329 0.950745 13.4259 1.26283 13.7378L2.05439 14.5289C2.31476 14.7891 2.73675 14.789 2.99705 14.5288L4.98563 12.5403C6.33851 11.1875 7.4632 10.0748 7.48484 10.0676C7.50653 10.0603 8.62656 11.1535 9.97378 12.4968C10.805 13.3257 11.5572 14.0649 12.0115 14.5096C12.2636 14.7565 12.6636 14.7623 12.9199 14.5198C13.2119 14.2436 13.5962 13.8727 13.9291 13.5275L14.531 12.9225C14.7902 12.662 14.7897 12.2408 14.5298 11.9809L10.0392 7.49029L10.3869 7.1385C10.5782 6.945 11.6656 5.85168 12.8033 4.70889C13.588 3.92065 14.3036 3.19484 14.6721 2.82033C14.8346 2.65516 14.8639 2.43104 14.7149 2.25356C14.555 2.06304 14.2785 1.75876 13.8011 1.27947C13.4716 0.948739 13.1518 0.636915 12.9149 0.40829C12.6889 0.190242 12.3507 0.175477 12.1179 0.386248C11.7608 0.709631 11.1159 1.31822 9.98715 2.44508C8.6354 3.79452 7.51995 4.90749 7.50836 4.91828C7.49673 4.92913 6.37544 3.82696 5.01655 2.46898C4.17751 1.63053 3.41756 0.886203 2.95891 0.439417C2.70522 0.192296 2.30362 0.188955 2.04778 0.433843C1.82357 0.648455 1.53684 0.926174 1.23334 1.22848Z"
+              fill="white" />
+          </svg>
+        </button>
+      </div>
+      <img class="true-icon" src="./public/temple/images/dark/icons/true-icon.svg" alt="">
+      <div class="modal__body">
+        <h2>Lorem Ipsum is a fish text often </h2>
+        <p>Lorem Ipsum is a fish text often used in
+          print and web design.</p>
+        <button class="send-btn modal_close">ОК</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Select2 JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+  <!-- Dropify JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dropify/0.2.2/js/dropify.min.js"></script>
+  <script type="module" src="/resources/js/layout/layout.js"></script>
+  <script type="module" src="/resources/js/modal/test.js"></script>
+</body>
+
+</html>

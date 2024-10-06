@@ -1,0 +1,1 @@
+import '/resources/scss/modal/modal_thanks.scss'

@@ -1,0 +1,102 @@
+
+.cooperation_thanks {
+    max-width: 490px;
+    .head {
+        margin-bottom: 15px;
+        .close__btn {
+            margin-left: auto;
+
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+
+        .cooperation_thanks__images {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            .first {
+                max-width: 232px;
+                &.white_them{
+                    display: none;
+                }
+            }
+            .second {
+                max-height: 80px;
+
+            }
+        }
+
+        .cooperation_thanks__text {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 25px;
+
+            &__main {
+                margin-top: 25px;
+                font-size: 24px;
+                font-weight: 550;
+            }
+            &__sub {
+                font-size: 18px;
+                padding: 0 30px;
+            }
+            &__main, &__sub{
+                color: #fff;
+            }
+        }
+        .cooperation_thanks__social {
+            display: flex;
+            width: 100%;
+            margin-top: 35px;
+            justify-content: space-between;
+
+            .social__item {
+                display: flex;
+                justify-content: center;
+
+                color: white;
+                padding: 10px 0;
+                width: 49%;
+                border-radius: 8px;
+                transition: 0.5s all;
+                &.first {
+                    background: #5291F0;
+                }
+                &.second {
+                    background: #12A108;
+                }
+
+                &:hover {
+                    opacity: 0.6;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .footer__close__btn {
+        margin-top: 15px;
+    }
+}
+
+body.white_theme .cooperation_thanks{
+    &__content {
+        .cooperation_thanks__text {
+            &__main, &__sub{
+                color: #000;
+            }
+        }
+    }
+    .first{
+        display: none;
+        &.white_them{
+            display: block;
+        }
+    }
+}
