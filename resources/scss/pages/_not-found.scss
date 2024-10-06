@@ -45,3 +45,21 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .not-found__title {
+    font-size: 100px;
+    line-height: 110px;
+  }
+  .not-found__subtitle {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .not-found__info {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .not-found {
+    background-size: cover;
+  }
+}
