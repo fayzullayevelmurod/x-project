@@ -6,9 +6,22 @@
   min-height: 100vh;
   align-items: center;
   justify-content: center;
-  background: url(../../../public/temple/images/dark/bg/not-found-bg.png)
-    no-repeat;
+  background: url(../../../temple/images/dark/bg/bg.png) no-repeat;
   background-size: 100% 100%;
+  position: relative;
+
+  &__stars {
+    position: absolute;
+    top: 170px;
+    left: 122px;
+    opacity: 0.26;
+  }
+  &__stars2 {
+    opacity: 0.26;
+    bottom: 103px;
+    right: 130px;
+    position: absolute;
+  }
 
   &__box {
     max-width: 531px;
@@ -46,6 +59,16 @@
   }
 }
 
+@media screen and (max-width: 992px) {
+  .not-found__stars {
+    top: 60px;
+    left: 60px;
+  }
+  .not-found__stars2 {
+    bottom: 60px;
+    right: 60px;
+  }
+}
 @media screen and (max-width: 768px) {
   .not-found__title {
     font-size: 100px;
@@ -61,5 +84,29 @@
   }
   .not-found {
     background-size: cover;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .not-found__stars {
+    top: 20px;
+    left: 20px;
+  }
+  .not-found__stars2 {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .not-found__stars {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .not-found__stars2 {
+    bottom: 20px;
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

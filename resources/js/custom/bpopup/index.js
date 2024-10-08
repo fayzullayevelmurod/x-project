@@ -12,7 +12,6 @@ window.modal = function(obj) {
       obj = $(obj);
       modalHref = obj.data("modal");
     }
-    console.log(modalHref);
     //
 
     if (bPopup != null) {

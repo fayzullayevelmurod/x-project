@@ -1,7 +1,8 @@
 .authorization-page {
   overflow: hidden;
-  .right-sidebar {
+  &__right-sidebar {
     position: fixed;
+    top: 0;
     right: 0;
     width: 350px;
     height: 100%;
@@ -12,11 +13,11 @@
     transform: translateX(100%);
     height: 100vh;
 
-    &.show {
+    &.right-sidebar_show {
       transform: translateX(0);
     }
 
-    .scroll-box {
+    &__scroll_box {
       overflow-y: auto;
       display: flex;
       flex-direction: column;
@@ -67,7 +68,7 @@
         position: relative;
         background: #121212;
         border-radius: 10px;
-        padding: 10px;
+        padding: 10px 24px 10px 10px;
         height: 40px;
       }
       input {
@@ -165,5 +166,18 @@
   display: block;
   &:hover {
     opacity: 0.6;
+  }
+}
+.copy-btn {
+  background: transparent;
+  padding: 0;
+}
+
+@media screen and (max-width: 390px) {
+  .authorization-page__right-sidebar {
+    max-width: 290px;
+  }
+  .authorization-page__right-sidebar .social-media span {
+    font-size: 12px;
   }
 }

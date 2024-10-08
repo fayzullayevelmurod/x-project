@@ -18,5 +18,13 @@ export default defineConfig({
       },
     },
   },
+  optimizeDeps: {
+    include: [
+      'jquery',
+      'select2',
+      'dropify',
+      'jquery-toast-plugin'
+    ]
+  }
   // publicDir: resolve(__dirname, 'src'),
 });

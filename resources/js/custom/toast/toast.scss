@@ -1,0 +1,76 @@
+.jq-toast-single .jq-has-icon .jq-icon-success {
+  display: block;
+}
+
+.jq-toast-single {
+  background: #1a1919;
+}
+
+.jq-toast-wrap {
+  max-width: 417px;
+  width: 100%;
+}
+.jq-toast-loaded {
+  bottom: 10px;
+  width: 367px;
+  top: unset;
+  transform: translateX(25px);
+}
+
+.jq-toast-single h2 {
+  font-size: 14px;
+  font-weight: 550;
+  line-height: 19.6px;
+  text-align: left;
+  color: #fff;
+}
+
+.jq-toast-single {
+  padding: 25px 25px 35px 105px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  text-align: left;
+  color: #fff;
+  min-width: 258px;
+}
+
+.close-jq-toast-single {
+  font-size: 20px;
+}
+
+.jq-icon-success {
+  background: url(../../../../temple/images/dark/bg/toast-succes.png) no-repeat,
+    #1a1919;
+  .jq-toast-loaded {
+    background: #39c922 !important;
+  }
+}
+.jq-icon-error {
+  background: url(../../../../temple/images/dark/bg/error-toast.png) no-repeat,
+    #1a1919;
+  .jq-toast-loaded {
+    background: #c92222 !important;
+  }
+}
+.jq-icon-info {
+  background: url(../../../../temple/images/dark/bg/info-toast.png) no-repeat,
+    #1a1919;
+  .jq-toast-loaded {
+    background: #f6c955 !important;
+  }
+}
+
+.jq-toast-single {
+  background-size: 71px 71px;
+  background-position: 25px 25px;
+}
+
+@media screen and (max-width: 480px) {
+  .jq-toast-wrap.top-right {
+    right: 10px;
+  }
+  .jq-toast-loaded {
+    width: 89%;
+  }
+}

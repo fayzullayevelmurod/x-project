@@ -5,13 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WebDev</title>
-  <!-- Select2 CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
-  <!-- Dropify CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/dropify/0.2.2/css/dropify.min.css" rel="stylesheet" />
-  <!-- Toastify CSS -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-
 </head>
 
 <body>
@@ -25,18 +18,18 @@
 
     <button onclick="modal(this);" data-modal="#review_modal">Оставьте отзыв modal</button>
 
-    <div class="right-sidebar">
-      <button class="right-sidebar__show-btn">
-        <img src="./public/temple/images/dark/icons/arrow-down.svg" alt="">
+    <div class="authorization-page__right-sidebar">
+      <button class="authorization-page__right-sidebar__show-btn">
+        <img src="./temple/images/dark/icons/arrow-down.svg" alt="">
       </button>
-      <div class="scroll-box">
+      <div class="authorization-page__right-sidebar__scroll_box">
         <div>
-          <h2 class="right-sidebar__title">Авторизация</h2>
-          <div class="right-sidebar__form">
-            <div class="right-sidebar__form-box">
+          <h2 class="authorization-page__right-sidebar__title">Авторизация</h2>
+          <div class="authorization-page__right-sidebar__form">
+            <div class="authorization-page__right-sidebar__form-box">
               <label>Логин</label>
               <div class="input-box">
-                <input type="text" placeholder="Введите логин">
+                <input type="text copy-text" placeholder="Введите логин">
                 <button class="copy-btn">
                   <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path opacity="0.992"
@@ -46,7 +39,7 @@
                 </button>
               </div>
             </div>
-            <div class="right-sidebar__form-box">
+            <div class="authorization-page__right-sidebar__form-box">
               <label>Логин</label>
               <div class="input-box">
                 <input type="password" placeholder="Введите пароль">
@@ -62,44 +55,48 @@
           </div>
         </div>
         <div>
-          <h2 class="right-sidebar__title">Тайтл</h2>
+          <h2 class="authorization-page__right-sidebar__title">Тайтл</h2>
           <div class="social-media__boxes">
             <div class="social-media">
               <span class="social-media__name">Telegram</span>
               <div class="copy-box">
-                <span>юзернейм</span>
-                <img src="./public/temple/images/dark/icons/copy-icon.svg" alt="">
+                <span class="copy-text">юзернейм</span>
+                <button class="copy-btn">
+                  <img src="./temple/images/dark/icons/copy-icon.svg" alt="">
+                </button>
               </div>
             </div>
             <div class="social-media">
               <span class="social-media__name">Номер телефона</span>
               <div class="copy-box">
-                <span>+7 (945) 345-34-43</span>
-                <img src="./public/temple/images/dark/icons/copy-icon.svg" alt="">
+                <span class="copy-text">+7 (945) 345-34-43</span>
+                <button class="copy-btn">
+                  <img src="./temple/images/dark/icons/copy-icon.svg" alt="">
+                </button>
               </div>
             </div>
           </div>
           <a href="#!" class="red-btn">Сайт разработчика</a>
         </div>
         <div class="work-pages">
-          <h2 class="right-sidebar__title">Страницы работы</h2>
+          <h2 class="authorization-page__right-sidebar__title">Страницы работы</h2>
           <div class="work-pages__list">
             <div class="work-pages__list-item active">
-              <img class="work-pages__list-img" src="./public/temple/images/dark/work-img.png" alt="work-img">
+              <img class="work-pages__list-img" src="./temple/images/dark/work-img.png" alt="work-img">
               <span class="work-label">Список работ</span>
             </div>
             <div class="work-pages__list-item">
-              <img class="work-pages__list-img" src="./public/temple/images/dark/work-img.png" alt="work-img">
+              <img class="work-pages__list-img" src="./temple/images/dark/work-img.png" alt="work-img">
               <span class="work-label">Политика <br>
                 соглашения</span>
             </div>
             <div class="work-pages__list-item">
-              <img class="work-pages__list-img" src="./public/temple/images/dark/work-img.png" alt="work-img">
+              <img class="work-pages__list-img" src="./temple/images/dark/work-img.png" alt="work-img">
               <span class="work-label">Политика <br>
                 соглашения</span>
             </div>
             <div class="work-pages__list-item">
-              <img class="work-pages__list-img" src="./public/temple/images/dark/work-img.png" alt="work-img">
+              <img class="work-pages__list-img" src="./temple/images/dark/work-img.png" alt="work-img">
               <span class="work-label">Политика <br>
                 соглашения</span>
             </div>
@@ -127,9 +124,13 @@
         <form>
           <div class="upload-avatar">
             <label>Аватар</label>
-            <div class="upload-file">
-              <img src="./public/temple/images/dark/icons/upload-file.svg" alt="">
+            <!-- <div class="upload-file">
+              <img src="./temple/images/dark/icons/upload-file.svg" alt="">
               <span>Загрузите фото</span>
+            </div> -->
+            <div class="upload-file">
+              <!-- <input type="file" class="dropify" data-default-file="./temple/images/dark/icons/upload-file.svg" /> -->
+              <input name="file1" type="file" class="dropify" data-height="100" />
             </div>
           </div>
           <div class="right-box">
@@ -146,33 +147,12 @@
         <div class="reviews">
           <div class="select-work">
             <label>Выберите категорию</label>
-            <div class="select selected-box-btn modal-select">
-              <div class="selected-box">
-                <span>Дизайн</span>
-                <svg width="7" height="5" viewBox="0 0 7 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M2.95231 4.73124C3.23417 5.08959 3.76583 5.08959 4.04769 4.73124L6.84213 1.17859C7.21437 0.705347 6.88659 0 6.29444 0H0.70556C0.113407 0 -0.214369 0.705347 0.157869 1.17859L2.95231 4.73124Z"
-                    fill="white" />
-                </svg>
-              </div>
-              <div class="select-options">
-                <div class="search-box">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M3.47266 3.00781C3.98803 3.10896 4.13842 3.40063 3.92383 3.88281C3.3264 4.49922 3.0712 5.2375 3.15821 6.09766C3.00847 6.51484 2.73048 6.62875 2.32422 6.43945C2.24401 6.37755 2.18477 6.30005 2.14649 6.20703C1.97413 4.99652 2.32504 3.962 3.19922 3.10352C3.29082 3.06288 3.38199 3.03097 3.47266 3.00781Z"
-                      fill="#353535" />
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M5.35938 0C5.73308 0 6.10676 0 6.48047 0C8.50128 0.264954 10.0371 1.26756 11.0879 3.00781C11.9753 4.69336 12.0756 6.42513 11.3887 8.20312C11.1523 8.7491 10.847 9.25042 10.4727 9.70703C11.6116 10.8597 12.7555 12.0081 13.9043 13.1523C13.9442 13.2052 13.9761 13.2599 14 13.3164C14 13.4258 14 13.5352 14 13.6445C13.9271 13.8086 13.8086 13.9271 13.6445 14C13.5352 14 13.4258 14 13.3164 14C13.2599 13.9761 13.2052 13.9442 13.1523 13.9043C12.0081 12.7555 10.8597 11.6116 9.70703 10.4727C7.96083 11.8326 6.02853 12.1744 3.91016 11.498C2.17138 10.8257 0.972809 9.618 0.314453 7.875C0.161894 7.41707 0.0570757 6.95223 0 6.48047C0 6.10676 0 5.73308 0 5.35938C0.216061 3.55491 1.0546 2.11935 2.51562 1.05273C3.37619 0.46282 4.32411 0.111908 5.35938 0ZM5.82422 1.03906C7.74905 1.0963 9.20284 1.94396 10.1855 3.58203C10.977 5.15452 10.9679 6.72224 10.1582 8.28516C9.1948 9.877 7.77746 10.7064 5.90625 10.7734C3.82175 10.6792 2.33152 9.69484 1.43555 7.82031C0.731273 5.93923 1.01382 4.22568 2.2832 2.67969C3.24174 1.65585 4.42209 1.10897 5.82422 1.03906Z"
-                      fill="#353535" />
-                  </svg>
-                  <input type="text" placeholder="Поиск...">
-                </div>
-                <div class="select-option">Разработка сайта</div>
-                <div class="select-option">Верстка</div>
-                <div class="select-option">Контекстная реклама</div>
-                <div class="select-option">SEO-продвижение</div>
-              </div>
-            </div>
+            <select class="form-control__select2 js-example-tags">
+              <option selected="selected">Дизайн</option>
+              <option>Разработка сайта</option>
+              <option>Верстка</option>
+              <option>SEO-продвижение</option>
+            </select>
           </div>
           <div class="stars">
             <label>Оцените качество работы</label>
@@ -217,14 +197,13 @@
     </div>
   </div>
 
-
-  <div id="show-error-toast" class="toast">
+  <div id="show-error-toast show-toast-btn" class="toast">
     <button class="close-toast">
-      <img src="./public/temple/images/dark/icons/close-icon.svg" alt="">
+      <img src="./temple/images/dark/icons/close-icon.svg" alt="">
     </button>
     <div class="toast-content">
       <div class="toast-icon__box error">
-        <img src="./public/temple/images/dark/icons/close-icon.svg" alt="" width="31" height="31">
+        <img src="./temple/images/dark/icons/close-icon.svg" alt="" width="31" height="31">
       </div>
       <div>
         <h3 class="toast-title">Тайтл</h3>
@@ -238,11 +217,11 @@
   </div>
   <div id="show-success-toast" class="toast">
     <button class="close-toast">
-      <img src="./public/temple/images/dark/icons/close-icon.svg" alt="">
+      <img src="./temple/images/dark/icons/close-icon.svg" alt="">
     </button>
     <div class="toast-content">
       <div class="toast-icon__box success">
-        <img src="./public/temple/images/dark/icons/check-icon.svg" alt="" width="31" height="31">
+        <img src="./temple/images/dark/icons/check-icon.svg" alt="" width="31" height="31">
       </div>
       <div>
         <h3 class="toast-title">Тайтл</h3>
@@ -256,11 +235,11 @@
   </div>
   <div id="show-info-toast" class="toast">
     <button class="close-toast">
-      <img src="./public/temple/images/dark/icons/close-icon.svg" alt="">
+      <img src="./temple/images/dark/icons/close-icon.svg" alt="">
     </button>
     <div class="toast-content">
       <div class="toast-icon__box info">
-        <img src="./public/temple/images/dark/icons/info-icon.svg" alt="" width="31" height="31">
+        <img src="./temple/images/dark/icons/info-icon.svg" alt="" width="31" height="31">
       </div>
       <div>
         <h3 class="toast-title">Тайтл</h3>
@@ -274,15 +253,9 @@
   </div>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <!-- Toastify JS -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-  <!-- Select2 JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
-  <!-- Dropify JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dropify/0.2.2/js/dropify.min.js"></script>
-  <script type="module" src="/resources/js/layout/layout.js"></script>
-  <script src="./resources/js/toast/toast.js"></script>
+  <!-- <script src="./resources/js/toast/toast.js"></script> -->
   <script type="module" src="/resources/js/modal/test.js"></script>
+  <script type="module" src="/resources/js/layout/layout.js"></script>
 </body>
 
 </html>
