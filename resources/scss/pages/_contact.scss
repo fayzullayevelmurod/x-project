@@ -4,9 +4,9 @@
 .contact-page {
   padding-top: 125px;
   padding-bottom: 265px;
-  background: url(../../../temple/images/dark/bg/bg.png) no-repeat;
+  background: url(/temple/images/dark/bg/bg.png) no-repeat;
   background-size: 100% 160%;
-  .title {
+  &__title {
     margin: 25px 0;
   }
   &__boxes {

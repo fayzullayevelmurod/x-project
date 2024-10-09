@@ -9,4 +9,7 @@ $(document).ready(function () {
   $(".js-example-tags").select2({
     tags: true
   });
+  $('.js-number-select').select2({
+    minimumResultsForSearch: Infinity,
+  });
 });

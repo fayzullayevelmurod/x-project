@@ -40,22 +40,19 @@
 }
 
 .jq-icon-success {
-  background: url(../../../../temple/images/dark/bg/toast-succes.png) no-repeat,
-    #1a1919;
+  background: url(/temple/images/dark/bg/toast-succes.png) no-repeat, #1a1919;
   .jq-toast-loaded {
     background: #39c922 !important;
   }
 }
 .jq-icon-error {
-  background: url(../../../../temple/images/dark/bg/error-toast.png) no-repeat,
-    #1a1919;
+  background: url(/temple/images/dark/bg/error-toast.png) no-repeat, #1a1919;
   .jq-toast-loaded {
     background: #c92222 !important;
   }
 }
 .jq-icon-info {
-  background: url(../../../../temple/images/dark/bg/info-toast.png) no-repeat,
-    #1a1919;
+  background: url(/temple/images/dark/bg/info-toast.png) no-repeat, #1a1919;
   .jq-toast-loaded {
     background: #f6c955 !important;
   }

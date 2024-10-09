@@ -1,10 +1,3 @@
-// intro start
-.intro {
-  height: 100vh;
-  margin-top: 90px;
-}
-// intro end
-
 // list-works start
 .list-works {
   margin-bottom: 50px;
@@ -146,74 +139,17 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
+    transition: all 0.3s linear;
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 // list-works end
-.footer_item_last_tittle {
-  margin: 10px 0;
-  color: #fff;
-}
-// faq start
-.faq {
-  color: #fff;
-  background: url(../../../temple/images/dark/bg/faq-bg.png) no-repeat;
-  background-size: 100% 176%;
-  padding-bottom: 80px;
-  background-position: 0px 54px;
-
-  .title {
-    margin-bottom: 25px;
-  }
-  .accordions {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .accordion {
-    padding: 20px;
-    background: #161717;
-    border-radius: 10px;
-    &-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      cursor: pointer;
-
-      img {
-        transition: all 0.3s linear;
-        &.active {
-          transform: rotate(180deg);
-        }
-      }
-    }
-    &-title {
-      font-family: 'HelveticaNeueCyr', sans-serif;
-      font-size: 18px;
-      font-weight: 700;
-      line-height: 25.2px;
-    }
-    &-info {
-      padding-top: 15px;
-      font-family: 'HelveticaNeueCyr', sans-serif;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 25.2px;
-      color: #acacac;
-    }
-  }
-}
-// faq end
 
 @media screen and (max-width: 768px) {
   .list-works .cards-container {
     grid-template-columns: repeat(3, 1fr);
-  }
-  .faq {
-    background-size: 768px 178%;
-  }
-  .faq .accordion {
-    padding: 15px;
   }
   .list-works .filter-box {
     flex-direction: column;

@@ -296,15 +296,15 @@
       <!-- start -->
       <section class="faq">
         <div class="faq__container">
-          <h2 class="title">FAQ</h2>
-          <div class="accordions">
-            <div class="accordion">
-              <div class="accordion-header">
-                <h3 class="accordion-title">Lorem Ipsum is a fish</h3>
+          <h2 class="faq__title">FAQ</h2>
+          <div class="faq__accordions">
+            <div class="faq__accordion">
+              <div class="faq__accordion-header">
+                <h3 class="faq__accordion-title">Lorem Ipsum is a fish</h3>
                 <img src="./temple/images/dark/icons/arrow-down.svg" alt="">
               </div>
-              <div class="accordion-content">
-                <p class="accordion-info">
+              <div class="faq__accordion-content">
+                <p class="faq__accordion-info">
                   Lorem Ipsum is a fish text often used in print and web design. Lorem Ipsum has been the standard
                   "fish" for Latin texts since the early 16th century. At that time, some unnamed printer created a
                   large collection of font sizes and shapes, using Lorem Ipsum to print samples. Lorem Ipsum has not
@@ -312,13 +312,13 @@
                 </p>
               </div>
             </div>
-            <div class="accordion">
-              <div class="accordion-header">
-                <h3 class="accordion-title">Lorem Ipsum is a fish</h3>
+            <div class="faq__accordion">
+              <div class="faq__accordion-header">
+                <h3 class="faq__accordion-title">Lorem Ipsum is a fish</h3>
                 <img src="./temple/images/dark/icons/arrow-down.svg" alt="">
               </div>
-              <div class="accordion-content">
-                <p class="accordion-info">
+              <div class="faq__accordion-content">
+                <p class="faq__accordion-info">
                   Lorem Ipsum is a fish text often used in print and web design. Lorem Ipsum has been the standard
                   "fish" for Latin texts since the early 16th century. At that time, some unnamed printer created a
                   large collection of font sizes and shapes, using Lorem Ipsum to print samples. Lorem Ipsum has not
@@ -590,20 +590,20 @@
           <div class="box">
             <label>Номер телефона</label>
             <div class="phone-input">
-              <div class="select-number__box select">
-                <div class="selectext-box">
+              <div class="number-select">
+                <!-- <div class="selectext-box">
                   <span class="selected-code">+7</span>
-                  <svg width="7" height="5" viewBox="0 0 7 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M2.95231 4.73124C3.23417 5.08959 3.76583 5.08959 4.04769 4.73124L6.84213 1.17859C7.21437 0.705347 6.88659 0 6.29444 0H0.70556C0.113407 0 -0.214369 0.705347 0.157869 1.17859L2.95231 4.73124Z"
-                      fill="white" />
-                  </svg>
                 </div>
                 <div class="country-select">
                   <span class="country-code select-option active">+7</span>
                   <span class="country-code select-option">+8</span>
                   <span class="country-code select-option">+9</span>
-                </div>
+                </div> -->
+                <select class="js-number-select">
+                  <option selected="selected">+7</option>
+                  <option>+8</option>
+                  <option>+9</option>
+                </select>
               </div>
               <div class="line"></div>
               <input type="tel" id="phone-number" class="phone-number-input" placeholder="000000000" />
@@ -655,6 +655,7 @@
 
   <script type="module" src="/resources/js/layout/layout.js"></script>
   <script type="module" src="/resources/js/modal/test.js"></script>
+  <script type="module" src="/resources/js/landing/index.js"></script>
 </body>
 
 </html>

@@ -101,7 +101,7 @@
       color: #fff;
       line-height: 28px;
       transition: all 0.4s;
-      &:hover{
+      &:hover {
         color: #c92222;
       }
     }
@@ -120,7 +120,7 @@
       align-items: center;
       border-radius: 8px;
       transition: all 0.4s;
-      &:hover{
+      &:hover {
         opacity: 0.7;
       }
     }
@@ -130,7 +130,7 @@
     flex-direction: column;
     gap: 8px;
     text-align: right;
-    &__item{
+    &__item {
       font-size: 18px;
       font-weight: 700;
       line-height: 28px;
@@ -148,27 +148,31 @@
   }
 
   @media (max-width: 750px) {
-    &__contacts{
+    &__contacts {
       gap: 10px;
     }
-    &__contacts__form{
+    &__contacts__form {
       display: none;
     }
-    &__body{
+    &__body {
       display: block;
     }
-    &__menu{
+    &__menu {
       gap: 0px;
       text-align: left;
       margin-top: 15px;
     }
-    &__header_title{
+    &__header_title {
       font-size: 24px;
     }
-    &__contacts__phone-call{
+    &__contacts__phone-call {
       gap: 10px;
       align-items: start;
       flex-direction: column;
     }
   }
+}
+.footer_item_last_tittle {
+  margin: 10px 0;
+  color: #fff;
 }

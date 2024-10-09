@@ -38,7 +38,8 @@
   padding: 10px;
   z-index: 1000000;
   margin-top: 10px;
-  top: 10px;
+  // top: 10px;
+  top: 0;
 }
 .select2-container--default .select2-search--dropdown .select2-search__field {
   border: none;
@@ -46,9 +47,7 @@
   height: 40px;
   padding: 6px 6px 6px 34px;
   color: #fff;
-  background: url(../../../../temple/images/dark/icons/search-icon.svg)
-      no-repeat,
-    #121212;
+  background: url(/temple/images/dark/icons/search-icon.svg) no-repeat, #121212;
   background-size: 14px 14px;
   background-position: 12px center;
   &::placeholder {
@@ -71,11 +70,15 @@
   padding: 0 0 12px 0;
 
   &:first-child {
-    padding-top: 11px;
+    padding-top: 0;
   }
   &:last-child {
     padding-bottom: 0;
   }
+}
+.select2-search,
+.select2-search--dropdown {
+  margin-bottom: 11px;
 }
 
 .select2-container--default
@@ -92,4 +95,14 @@
 
 .select2-container {
   width: 100% !important;
+}
+
+.number-select .select2-selection__rendered {
+  padding: 10px !important;
+  min-width: 50px;
+  text-align: center !important;
+}
+
+.select2-search--hide + .select2-results {
+  text-align: center;
 }

@@ -37,6 +37,11 @@
       align-items: center;
       justify-content: center;
       border-radius: 5px 0 0 5px;
+      transition: all 0.3s linear;
+
+      &:hover {
+        opacity: 0.6;
+      }
 
       img {
         transform: rotate(90deg);
@@ -134,6 +139,10 @@
           padding: 10px;
           border-radius: 10px;
           background: #121212;
+          transition: all 0.3s linear;
+          &:hover {
+            background: rgba(248, 40, 40, 0.2392156863);
+          }
           &.active {
             background: #f828283d;
 
@@ -167,10 +176,6 @@
   &:hover {
     opacity: 0.6;
   }
-}
-.copy-btn {
-  background: transparent;
-  padding: 0;
 }
 
 @media screen and (max-width: 390px) {

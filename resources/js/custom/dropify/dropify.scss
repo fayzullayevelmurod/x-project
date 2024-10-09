@@ -9,14 +9,10 @@
   background: #121212 !important;
 }
 
-// .dropify-wrapper .dropify-message p {
-//   display: none;
-// }
-
 .dropify-font-upload:before,
 .dropify-wrapper .dropify-message span.file-icon:before {
   content: '';
-  background: url(../../../../temple/images/dark/icons/cloud.svg) no-repeat;
+  background: url(/temple/images/dark/icons/cloud.svg) no-repeat;
   background-size: contain;
   height: 25px;
   width: 40px;

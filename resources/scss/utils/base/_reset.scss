@@ -80,6 +80,10 @@ h6 {
   font-size: inherit;
   font-weight: 400;
 }
+button {
+  background: transparent;
+  padding: 0;
+}
 /*--------------------*/
 
 .wrapper {
@@ -108,16 +112,23 @@ h6 {
     line-height: 21.6px;
     text-align: left;
     color: #acacac;
-
-    &.active {
+    transition: all 0.3s linear;
+    &.active,
+    &:hover {
       color: #c92222;
     }
   }
 }
 
-.title {
+[class*='__title'] {
   font-size: 28px;
   font-weight: 700;
   line-height: 33.6px;
   color: #fff;
+}
+
+.copy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
