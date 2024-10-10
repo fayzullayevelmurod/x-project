@@ -50,6 +50,20 @@
     gap: 6px;
     height: 40px;
     align-items: center;
+
+    svg {
+      path {
+        fill: #f8282840;
+        transition: all 0.1s linear;
+      }
+      &.hover,
+      &.active {
+        path {
+          cursor: pointer;
+          fill: #f82828;
+        }
+      }
+    }
   }
   label {
     font-family: Inter;
